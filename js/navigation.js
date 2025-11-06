@@ -154,6 +154,15 @@ class NavBar {
 			},
 		);
 		this._addElement_divider({keyPath: [NavBar._CAT_UTILITIES]});
+		// region Custom Modifications
+		this._addElement_label({keyPath: [NavBar._CAT_UTILITIES], html: `<p>Custom Additions</p>`});
+		this._addElement_li({keyPath: [NavBar._CAT_UTILITIES], page: "img", aText: "Browse Local Site Images"});
+		this._addElement_li({keyPath: [NavBar._CAT_UTILITIES], page: "prerelease", aText: "Browse Local Prerelease Content"});
+		this._addElement_li({keyPath: [NavBar._CAT_UTILITIES], page: "homebrew", aText: "Browse Local Homebrew"});
+		this._addElement_li({keyPath: [NavBar._CAT_UTILITIES], page: "_img", aText: "Browse Local Homebrew Images"});
+		this._addElement_li({keyPath: [NavBar._CAT_UTILITIES], page: "_img-brew", aText: "Browse Local Homebrew Asset Repo"});
+		this._addElement_divider({keyPath: [NavBar._CAT_UTILITIES]});
+		// endregion
 		this._addElement_li({keyPath: [NavBar._CAT_UTILITIES], page: "inittrackerplayerview.html", aText: "Initiative Tracker Player View"});
 		this._addElement_divider({keyPath: [NavBar._CAT_UTILITIES]});
 		this._addElement_li({keyPath: [NavBar._CAT_UTILITIES], page: "renderdemo.html", aText: "Renderer Demo"});
