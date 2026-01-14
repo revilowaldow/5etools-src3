@@ -6010,6 +6010,9 @@
 						}
 					},
 					"damage": {
+						"critical": {
+							"allow": true
+						},
 						"parts": [
 							{
 								"custom": {
@@ -6456,7 +6459,6 @@
 				{
 					"foundryId": "innateSorcery",
 					"disabled": true,
-					"transfer": true,
 					"duration": {
 						"seconds": 60
 					},
@@ -19233,6 +19235,9 @@
 						}
 					},
 					"damage": {
+						"critical": {
+							"allow": true
+						},
 						"parts": [
 							{
 								"bonus": "@classes.rogue.levels",
