@@ -1510,14 +1510,14 @@ class ListPage {
 	}
 
 	_bindLinkExportButton ({btn} = {}) {
-		btn ||= this._getOrTabRightButton(`link-export`, `magnet`);
+		btn ||= this._getOrTabRightButton(`link-export`, `glyphicon-magnet`);
 		btn.addClass("ve-btn-copy-effect")
 			.onn("click", evt => this._pHandleClick_doCopyFilterLink(evt, {btn, isAllowNonExtension: true}))
 			.tooltip("Copy Link to Filters (SHIFT to add list; CTRL to copy @filter tag)");
 	}
 
 	_bindPopoutButton () {
-		this._getOrTabRightButton(`popout`, `new-window`)
+		this._getOrTabRightButton(`popout`, `glyphicon-new-window`)
 			.tooltip(`Popout Window (SHIFT for Source Data; CTRL for Markdown Render)`)
 			.onn(
 				"click",
@@ -1541,9 +1541,8 @@ class ListPage {
 	_bindPopoutButton_doShowStatblock (evt) {
 		if (!evt.shiftKey) return Renderer.hover.doPopoutCurPage(evt, this._lastRender.entity);
 
-		const content = Renderer.hover.getHoverContent_statsCode(this._lastRender.entity);
 		Renderer.hover.getShowWindow(
-			content,
+			Renderer.hover.getHoverContent_statsCode(this._lastRender.entity),
 			Renderer.hover.getWindowPositionFromEvent(evt),
 			{
 				title: `${this._lastRender.entity.name} \u2014 Source Data`,
@@ -1566,10 +1565,9 @@ class ListPage {
 				},
 			],
 		});
-		const content = Renderer.hover.getHoverContent_miscCode(name, mdText);
 
 		Renderer.hover.getShowWindow(
-			content,
+			Renderer.hover.getHoverContent_miscCode(name, mdText),
 			Renderer.hover.getWindowPositionFromEvent(evt),
 			{
 				title: name,
@@ -1832,7 +1830,7 @@ class ListPage {
 		);
 	}
 
-	_getOrTabRightButton (ident, icon, {title} = {}) {
+	_getOrTabRightButton (ident, iconClassName, {title} = {}) {
 		if (this._btnsTabs[ident]) return this._btnsTabs[ident];
 
 		this._btnsTabs[ident] = e_({
@@ -1841,7 +1839,7 @@ class ListPage {
 			children: [
 				e_({
 					tag: "span",
-					clazz: `glyphicon glyphicon-${icon}`,
+					clazz: `glyphicon ${iconClassName}`,
 				}),
 			],
 			title,
@@ -1854,19 +1852,19 @@ class ListPage {
 	}
 
 	_bindPinButton () {
-		this._getOrTabRightButton(`pin`, `pushpin`)
+		this._getOrTabRightButton(`pin`, `glyphicon-pushpin`)
 			.onn("click", () => this._sublistManager.pHandleClick_btnPin({entity: this._lastRender.entity}))
 			.tooltip("Pin (Toggle) (Hotkey: p/P)");
 	}
 
 	_bindAddButton () {
-		this._getOrTabRightButton(`sublist-add`, `plus`)
+		this._getOrTabRightButton(`sublist-add`, `glyphicon-plus`)
 			.tooltip(this._sublistManager.getTitleBtnAdd())
 			.onn("click", evt => this._sublistManager.pHandleClick_btnAdd({entity: this._lastRender.entity, isMultiple: !!evt.shiftKey}));
 	}
 
 	_bindSubtractButton () {
-		this._getOrTabRightButton(`sublist-subtract`, `minus`)
+		this._getOrTabRightButton(`sublist-subtract`, `glyphicon-minus`)
 			.tooltip(this._sublistManager.getTitleBtnSubtract())
 			.onn("click", evt => this._sublistManager.pHandleClick_btnSubtract({entity: this._lastRender.entity, isMultiple: !!evt.shiftKey}));
 	}
@@ -1882,7 +1880,7 @@ class ListPage {
 	_bindOtherButtons (opts) {
 		opts = opts || {};
 
-		const btnOptions = this._getOrTabRightButton(`sublist-other`, `option-vertical`, {title: "Other Options"});
+		const btnOptions = this._getOrTabRightButton(`sublist-other`, `glyphicon-option-vertical`, {title: "Other Options"});
 
 		const contextOptions = [
 			new ContextUtil.Action(
@@ -2338,7 +2336,7 @@ class ListPage {
 		const hoverWindow = Renderer.hover.getShowWindow(
 			ee`<div class="ve-flex-col">
 				<div class="split-v-center mb-2 px-2 mt-2">
-					<i class="mr-2">Optionally resize the width of the window, then Copy or Save.</i>
+					<i class="mr-2">Optionally resize <kbd title="(The width of)">&harr;</kbd> the window, then Copy or Save.</i>
 					<div class="ve-btn-group">
 						${btnCpy}
 						${btnSave}
