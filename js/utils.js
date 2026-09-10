@@ -56,11 +56,11 @@ globalThis.VeCt = class {
 
 	static LOC_HOSTNAME_CANCER = "5e.tools";
 
-	static URL_BREW = `https://github.com/TheGiddyLimit/homebrew`;
-	static URL_ROOT_BREW = `https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/`; // N.b. must end with a slash
-	static URL_ROOT_BREW_IMG = `https://raw.githubusercontent.com/TheGiddyLimit/homebrew-img/main/`; // N.b. must end with a slash
-	static URL_PRERELEASE = `https://github.com/TheGiddyLimit/unearthed-arcana`;
-	static URL_ROOT_PRERELEASE = `https://raw.githubusercontent.com/TheGiddyLimit/unearthed-arcana/master/`; // As above
+	static URL_BREW = `https://github.com/revilowaldow/homebrew`;
+	static URL_ROOT_BREW = `https://raw.githubusercontent.com/revilowaldow/homebrew/master/`; // N.b. must end with a slash
+	static URL_ROOT_BREW_IMG = `https://raw.githubusercontent.com/revilowaldow/homebrew-img/main/`; // N.b. must end with a slash
+	static URL_PRERELEASE = `https://github.com/revilowaldow/unearthed-arcana`;
+	static URL_ROOT_PRERELEASE = `https://raw.githubusercontent.com/revilowaldow/unearthed-arcana/master/`; // As above
 
 	static STR_NO_ATTUNEMENT = "No Attunement Required";
 
