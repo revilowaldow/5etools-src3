@@ -4895,7 +4895,7 @@
 					"type": "entries",
 					"name": "Maneuvers",
 					"entries": [
-						"You learn three maneuvers of your choice from the \"{@filter Maneuvers Options|optionalfeatures|feature type=MV:B|source=XPHB}\" section later in this subclass's description. Many maneuvers enhance an attack in some way. You can use only one maneuver per attack.",
+						"You learn three maneuvers of your choice from the \"{@filter Maneuver Options|optionalfeatures|feature type=MV:B|source===extend}\" section later in this subclass's description. Many maneuvers enhance an attack in some way. You can use only one maneuver per attack.",
 						"You learn two additional maneuvers of your choice when you reach Fighter levels 7, 10, and 15. Each time you learn new maneuvers, you can also replace one maneuver you know with a different one."
 					]
 				},
@@ -4942,11 +4942,19 @@
 						},
 						{
 							"type": "refOptionalfeature",
+							"optionalfeature": "Battle Shout|WoW"
+						},
+						{
+							"type": "refOptionalfeature",
 							"optionalfeature": "Commander's Strike|XPHB"
 						},
 						{
 							"type": "refOptionalfeature",
 							"optionalfeature": "Commanding Presence|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Demoralizing Shout|WoW"
 						},
 						{
 							"type": "refOptionalfeature",
@@ -4970,6 +4978,10 @@
 						},
 						{
 							"type": "refOptionalfeature",
+							"optionalfeature": "Heroic Leap|WoW"
+						},
+						{
+							"type": "refOptionalfeature",
 							"optionalfeature": "Lunging Attack|XPHB"
 						},
 						{
@@ -4979,6 +4991,10 @@
 						{
 							"type": "refOptionalfeature",
 							"optionalfeature": "Menacing Attack|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Mortal Strike|WoW"
 						},
 						{
 							"type": "refOptionalfeature",
@@ -5011,6 +5027,10 @@
 						{
 							"type": "refOptionalfeature",
 							"optionalfeature": "Trip Attack|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Warding Maneuver|WoW"
 						}
 					]
 				}
